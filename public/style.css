@@ -1,0 +1,17 @@
+section{
+ display: grid;
+ grid-template-columns: repeat(4, 1fr)
+}
+article{
+  
+  margin: 20px;
+}
+img{
+  max-width: 200px;
+}
+h1{
+  font-size: 36px;
+  margin: 20px;
+  text-align: center;
+  
+}
