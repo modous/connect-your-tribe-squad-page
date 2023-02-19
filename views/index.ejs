@@ -1,32 +1,41 @@
 <%- include('./partials/head') %>
 
+<section>
+  <h1><%= squad.name %></h1>
 
- <section>
-<h1><%= squad.name %></h1>
+  <article class="book-member">
+    <h2>Klik op een knop om te sorteren:</h2>
+    <article class="sorteer-lijst">
+      <ul>
+        <li><input type="checkbox" /><button class="gamen">Gamen</button></li>
+        <li>
+          <input type="checkbox" /><button class="netflix">Netflix</button>
+        </li>
+        <li>
+          <input type="checkbox" /><button class="voetbal">Voetbal</button>
+        </li>
+      </ul>
 
-
-<article class="book-member">
-  <h2>Klik op een knop om te sorteren:</h2>
-  <article class="sorteer-lijst">
- <ul>
-  <li><input type="checkbox"><button class="gamen">Gamen</button></li>
-  <li><input type="checkbox"><button class="netflix">Netflix</button></li>
-  <li><input type="checkbox"><button class="voetbal">Voetbal</button></li>
- </ul>
-
- <ul>
-  <li><input type="checkbox"><button class="anime">Anime</button></li>
-  <li><input type="checkbox"><button class="crypto">Crypto</button></li>
- </ul>
-
+      <ul>
+        <li><input type="checkbox" /><button class="anime">Anime</button></li>
+        <li><input type="checkbox" /><button class="crypto">Crypto</button></li>
+      </ul>
+    </article>
   </article>
-</article>
+</section>
 
+<section class="boek-member">
+  <article class="boek">
+    <p>hallo</p>
+  </article>
+  <article class="boek">
+    <p>hallo</p>
+  </article>
 </section>
 
 <section class="all-members">
-<% squad.members.forEach(member => { %>
-  <article class="members">
+  <% squad.members.forEach(member => { %>
+  <article class="member">
     <% if (member.avatar) { %>
     <img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
     <% }else{ %>
@@ -35,11 +44,6 @@
     <h2><%= member.name %> <%= member.prefix %> <%= member.surname %></h2>
   </article>
   <% }) %>
-
- </section>
-  
-
-  
-
+</section>
 
 <%- include('./partials/foot') %>
