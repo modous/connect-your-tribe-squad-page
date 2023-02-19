@@ -1,12 +1,26 @@
-section{
+.all-members{
  display: grid;
  grid-template-columns: repeat(4, 1fr)
 }
-article{
-  
+.book-member{
+margin: 20px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.sorteer-lijst{
+  display: flex;
+}
+
+.members{
+  padding: 5px;
+  background-color: burlywood;
   margin: 20px;
 }
 img{
+  
   max-width: 200px;
 }
 h1{

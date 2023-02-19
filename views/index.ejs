@@ -4,8 +4,29 @@
  <section>
 <h1><%= squad.name %></h1>
 
+
+<article class="book-member">
+  <h2>Klik op een knop om te sorteren:</h2>
+  <article class="sorteer-lijst">
+ <ul>
+  <li><input type="checkbox"><button class="gamen">Gamen</button></li>
+  <li><input type="checkbox"><button class="netflix">Netflix</button></li>
+  <li><input type="checkbox"><button class="voetbal">Voetbal</button></li>
+ </ul>
+
+ <ul>
+  <li><input type="checkbox"><button class="anime">Anime</button></li>
+  <li><input type="checkbox"><button class="crypto">Crypto</button></li>
+ </ul>
+
+  </article>
+</article>
+
+</section>
+
+<section class="all-members">
 <% squad.members.forEach(member => { %>
-  <article>
+  <article class="members">
     <% if (member.avatar) { %>
     <img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
     <% }else{ %>
