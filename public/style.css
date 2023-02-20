@@ -1,4 +1,8 @@
 
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+
+}
 
 
 .boek{
@@ -8,18 +12,29 @@
   border-style: solid;
   border-width: 5px;
   border-color: black;
+  width: 200px;
+  height: 350px;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
 }
 
 .boek-member{
   display: flex;
+  justify-content: center;
+  
 }
 
 .all-members{
  display: grid;
  grid-template-columns: repeat(6, 1fr);
 }
-.book-member{
+.sorteer{
 margin: 20px;
+display: block;
 }
 
 ul{
