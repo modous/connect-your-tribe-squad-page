@@ -26,8 +26,8 @@
       <label><input type="checkbox"> Voetbal</label>
       <label><input type="checkbox"> Anime</label>
       <label><input type="checkbox"> Crypto</label>
-
-  
+    </section>
+  </header>
   <main>
     <section class="side-bar">
       <% squad.members.forEach(member=> { %>
@@ -77,7 +77,7 @@
       <article class="rightcard boek">
         <% squad.members.forEach(member=> { %>
           <div class="cardtext hide" id="<%= member.id + 1 %>">
-            <h1>Bio </h1>
+            <h2>Bio </h2>
 
             <% if (member.bio) { %>
               <p class="bio">

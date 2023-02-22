@@ -28,7 +28,6 @@ app.get('/', (request, response) => {
     response.render('index', data)
   })
 })
-  console.log(data)
 
 // Stel het poortnummer in waar express op gaat luisteren
 app.set('port', process.env.PORT || 8000)

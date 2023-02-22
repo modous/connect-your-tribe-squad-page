@@ -133,11 +133,11 @@ header {
   align-items: center;
   gap: 2em;
   padding: 1em;
-  padding-left: 2em;
   margin: 1em 1em 0 1em;
   border: none;
   background-color: var(--secondary);
   border-radius: var(--border);
+  cursor: pointer;
 }
 
 .side-bar button:nth-last-child(1) {
@@ -270,7 +270,7 @@ ul {
   }
 }
 
-h1{
+h2{
   font-size: 32px;
   margin: 20px;
   text-align: center;
