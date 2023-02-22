@@ -147,7 +147,7 @@ header p {
 
 .side-bar button img{
   height: 4em;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   background-size: cover;
   background-position: center;
   border-radius: var(--border);
@@ -239,8 +239,6 @@ ul {
   margin: 10px;
 }
 
-.boek img {
-}
 .members-image{
   display: block;
   margin: 0 auto;
@@ -262,12 +260,3 @@ ul {
   }
 }
 
-
-
-
-h1{
-  font-size: 32px;
-  margin: 20px;
-  text-align: center;
-  
-}

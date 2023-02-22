@@ -99,7 +99,7 @@
 </section>
 
 <section class="all-members">
-  <% squad.members.forEach(member => { %>
+  <% squad.members.forEach(member=> { %>
   <article class="member">
     <button class="trigger-member" data-id="<%= member.id %>">
     <% if (member.avatar) { %>
@@ -109,6 +109,7 @@
     <% } %>
         </button>
 
+        <% }) %>
 
     </section>
     <section class="boek-member">
