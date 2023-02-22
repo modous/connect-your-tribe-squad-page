@@ -1,7 +1,7 @@
 // Importeer express uit de node_modules map
 import express, { response } from 'express'
 
-const url = 'https://whois.fdnd.nl/api/v1/squad/squad-b-2022'
+const url = "https://whois.fdnd.nl/api/v1/squad/";
 const data = await fetch(url)
 
 .then((response) => response.json())
@@ -22,6 +22,11 @@ app.use(express.static('public'))
 
 // Maak een route voor de index
 app.get('/', function (req, res) {
+    let slug = req.query.squad || "squad-b-2022";
+    let orderBy = req.query.orderBy || "name";
+    let squadUrl = url + slug + "?orderBy=" + orderBy + "&direction=ASC";
+
+
   // res.send('Hello World!')
   res.render('index', data)
 })

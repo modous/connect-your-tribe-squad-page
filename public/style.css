@@ -1,20 +1,166 @@
+:root {
+  --border: 15px;
+  --full-border: 50px;
+  --box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+
+  --light: #fff;
+  --dark: #000;
+
+  --primary: #110D40;
+  --secondary: #19CAB8;
+  --tertiary: #334995;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100svh;
 }
 
-
-.boek{
-  background-color: burlywood;
-  padding: 50px;
-  margin-bottom: 50px;
-  border-style: solid;
-  border-width: 5px;
-  border-color: black;
-  width: 200px;
-  height: 350px;
+h1 {
+  font-size: clamp(1.6em, 7vw, 1.8em);
 }
+
+h1 span {
+  color: var(--secondary);
+}
+
+p {
+  font-size: 1.5em;
+}
+
+/* begin header + sidebar */
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2em;
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+header h1,
+header p {
+}
+
+.site-title {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+  justify-content: space-between;
+  /* gap: 1em; */
+}
+
+.squad-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  overflow-x: auto;
+  padding-top: 1em;
+  white-space: nowrap;
+}
+
+.squad-filter ul {
+  display: flex;
+  list-style: none;
+  gap: 0.5em;
+}
+
+.squad-filter ul li a {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  margin: 0 0.15em;
+  font-size: 1.125em;
+  color: var(--dark);
+  background-color: var(--light);
+  border-radius: var(--full-border);
+  transition: 0.3s ease-in-out;
+}
+
+.squad-filter ul li a:hover,
+.squad-filter ul li .active {
+  background-color: var(--secondary);
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.filter label {
+  font-size: 1.125em;
+  padding: 0.5em 1em;
+  background-color: var(--light);
+  color: var(--dark);
+  border-radius: var(--full-border);
+}
+
+.filter label:hover,
+.filter label:has(input:checked) {
+  background-color: var(--secondary);
+}
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  width: 100%;
+  height: calc(100vh - 157.6px);
+  height: calc(100svh - 157.6px);
+  overflow-x: auto;
+  background-color: var(--tertiary);
+}
+
+.side-bar button {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 1em;
+  padding-left: 2em;
+  margin: 1em 1em 0 1em;
+  border: none;
+  background-color: var(--secondary);
+  border-radius: var(--border);
+}
+
+.side-bar button:nth-last-child(1) {
+  margin: 1em;
+}
+
+.side-bar button img{
+  height: 4em;
+  aspect-ratio: 1;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--border);
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* end header + sidebar */
+
 .show {
   display: block;
 }
@@ -22,30 +168,40 @@ body {
   display: none;
 }
 
-.boek-member{
+.boek-member {
   display: flex;
   justify-content: center;
-  
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
-.all-members{
- display: grid;
- grid-template-columns: repeat(6, 1fr);
-}
-.sorteer{
-margin: 20px;
-display: block;
+.boek {
+  background-color: burlywood;
+  padding: 50px;
+  border: 5px solid black;
+  width: 200px;
+  height: 350px;
 }
 
-ul{
+.all-members {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.sorteer {
+  margin: 20px;
+  display: block;
+}
+
+ul {
   list-style-type: none;
 }
 
-.sorteer-lijst{
+.sorteer-lijst {
   display: flex;
 }
 
-.member{
+.member {
   border-color: black;
   border-bottom: 5px;
   border-radius: 20px;
@@ -54,17 +210,23 @@ ul{
   margin: 10px;
 }
 
-img{
+.boek img {
   display: block;
   margin: 0 auto;
   max-width: 80px;
   border-width: 12px;
- border-color: black;
+  border-color: black;
 }
 
-h1{
-  font-size: 36px;
-  margin: 20px;
-  text-align: center;
-  
+@media screen and (min-width: 1030px) {
+  .site-title {
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .squad-filter {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
