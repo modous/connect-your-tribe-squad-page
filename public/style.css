@@ -67,7 +67,8 @@ header p {
   display: flex;
   align-items: center;
   gap: 0.5em;
-  overflow-x: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding-top: 1em;
   white-space: nowrap;
 }
