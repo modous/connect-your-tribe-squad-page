@@ -30,14 +30,14 @@
     <div class="card hide" id="<%= member.id %>">
   
     <% if (member.avatar) { %>
-      <img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
+      <img  class="boek-image" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
       <% }else{ %>
-      <img src="./media/download.jpeg" alt="Placeholder avatar" />
+      <img  class="boek-image" src="./media/download.jpeg" alt="Placeholder avatar" />
       <% } %>
-
-   <h2><%= member.name %> <%= member.prefix %> <%= member.surname %> </h2>
-   <h3>Student Frontend & design op het HVA</h3>
-
+  <div class="content-links">
+    <h2><%= member.name %> <%= member.prefix %> <%= member.surname %> </h2>
+    <h3><%= member.role %> Frontend & design op het HVA</h3>
+  </div>
   </div>
     
    <% })  %>
@@ -47,7 +47,29 @@
   <% squad.members.forEach(member => { %>
     <div class="cardtext hide" id="<%= member.id + 1 %>">
     <h1>Bio </h1>
-    <p>hallo</p>
+    
+    <% if (member.bio) { %>
+      <p class="bio"><%=  member.bio.html %></p>
+      <% }else{ %>
+        <p>Geen Bio</p>
+      <% } %>
+    <h1>Contact</h1>
+    <% if (member.gitHubHandle) { %>
+      <p class="bio"> <strong>gitHubHandle:</strong><br><%=  member.gitHubHandle %>
+      
+      </p>
+      <% }else{ %>
+        <p class="bio">Geen githubhandle</p>
+      <% } %>
+      <% if (member.website) { %>
+        <p class="bio"> <strong>Webiste:</strong><br>
+          <a href="<%=  member.website %>">Bekijk visitekaartje</a>
+        
+        </p>
+        <% }else{ %>
+          <p class="bio">Geen website</p>
+        <% } %>
+
   </div>
     <% })  %>
   </article>
@@ -58,9 +80,9 @@
   <article class="member">
     <button class="trigger-member" data-id="<%= member.id %>">
     <% if (member.avatar) { %>
-      <img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
+      <img class="members-image" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
     <% }else{ %>
-      <img src="./media/download.jpeg" alt="Placeholder avatar" />
+      <img class="members-image" src="./media/download.jpeg" alt="Placeholder avatar" />
     <% } %>
         </button>
     <h2><%= member.name %> <%= member.prefix %> <%= member.surname %></h2>
