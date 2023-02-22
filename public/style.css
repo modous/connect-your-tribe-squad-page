@@ -161,6 +161,29 @@ main {
 
 /* end header + sidebar */
 
+
+.boek{
+  background-color: burlywood;
+  /* padding: 10px; */
+  margin-bottom: 50px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+  width: 300px;
+  height: 500px;
+  box-shadow: 1px 8px 12px 2px black;
+}
+
+.boek-image{
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.content-links{
+  padding: 10px;
+}
+
 .show {
   display: block;
 }
@@ -201,7 +224,13 @@ ul {
   display: flex;
 }
 
-.member {
+
+.bio{
+  padding: 10px;
+}
+
+
+.member{
   border-color: black;
   border-bottom: 5px;
   border-radius: 20px;
@@ -211,6 +240,8 @@ ul {
 }
 
 .boek img {
+}
+.members-image{
   display: block;
   margin: 0 auto;
   max-width: 80px;
@@ -229,4 +260,14 @@ ul {
     padding-top: 0;
     padding-bottom: 0;
   }
+}
+
+
+
+
+h1{
+  font-size: 32px;
+  margin: 20px;
+  text-align: center;
+  
 }
