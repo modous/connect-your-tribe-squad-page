@@ -1,7 +1,7 @@
 <%- include('./partials/head') %>
   <header>
     <section class="site-title">
-      <section class="title">
+      <section class="title ">
         <h1>FDND <span>
             <%= squad.name %>
           </span> landings pagina</h1>
@@ -30,83 +30,88 @@
   </header>
   <main>
     <section class="side-bar">
-      <% squad.members.forEach(member=> { %>
-        <button>
+      <section class="side-bar-title">
+        <p>bekijk mijn profiel</p>
+      </section>
+      <section class="profiel">
+        <% squad.members.forEach(member=> { %>
+          <button>
 
-          <% if (member.avatar) { %>
-            <img class="trigger-member" data-id="<%= member.id %>" src="<%= member.avatar %>"
-              alt="De avatar van <%= member.name + ' ' + member.prefix + ' ' + member.surname %>" />
-            <% } else { %>
-              <img src="./links/avatar-placeholder.png" alt="placeholder avatar" />
-              <% } %>
+            <% if (member.avatar) { %>
+              <img src="<%= member.avatar %>"
+                alt="De avatar van <%= member.name + ' ' + member.prefix + ' ' + member.surname %>" />
+              <% } else { %>
+                <img src="./media/download.jpeg" alt="Placeholder avatar" />
+                <% } %>
 
-                <p>
-                  <%= member.name + ' ' + member.prefix + ' ' + member.surname %>
-                </p>
-        </button> 
-        <% }) %>
+                  <p>
+                    <%= member.name + ' ' + member.prefix + ' ' + member.surname %>
+                  </p>
+          </button>
+          <% }) %>
 
+      </section>
     </section>
 
     <section class="boek-member">
       <div class="page-flip">
-      <article class="boek">
-        <% squad.members.forEach(member=> { %>
-          <div class="leftcard hide" id="<%= member.id %>">
+        <article class="cardprofile">
+          <% squad.members.forEach(member=> { %>
+            <div class="leftcard hide" id="<%= member.id %>">
 
-            <% if (member.avatar) { %>
-              <img class="boek-image" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
-              <% }else{ %>
-                <img class="boek-image" src="./media/download.jpeg" alt="Placeholder avatar" />
-                <% } %>
-                  <div class="content-links">
-                    <h2>
-                      <%= member.name %>
-                        <%= member.prefix %>
-                          <%= member.surname %>
-                    </h2>
-                    <h3>
-                      <%= member.role %> Frontend & design op het HVA
-                    </h3>
-                  </div>
-          </div>
+              <% if (member.avatar) { %>
+                <img class="boek-image" src="<%= member.avatar %>"
+                  alt="De avatar van <%= member.name + ' ' + member.prefix + ' ' + member.surname %>" />
+                <% } else { %>
+                  <img src="./media/download.jpeg" alt="Placeholder avatar" />
+                  <% } %>
+                    <div class="content-links">
+                      <h2>
+                        <%= member.name + ' ' + member.prefix + ' ' + member.surname %>
+                      </h2>
+                      <h3>
+                        <%= member.role %> Frontend & design op het HVA
+                      </h3>
+                    </div>
+            </div>
 
-          <% }) %>
+            <% }) %>
 
-      </article>
-      <article class="rightcard boek">
-        <% squad.members.forEach(member=> { %>
-          <div class="cardtext hide" id="<%= member.id + 1 %>">
-            <h2>Bio </h2>
+        </article>
+        <article class="rightcard">
+          <% squad.members.forEach(member=> { %>
+            <div class="cardtext hide" id="<%= member.id + 1 %>">
+              <h2>Bio </h2>
 
-            <% if (member.bio) { %>
-              <p class="bio">
-                <%= member.bio.html %>
-              </p>
-              <% }else{ %>
-                <p>Geen Bio</p>
-                <% } %>
-                  <h2>Contact</h2>
-                  <% if (member.gitHubHandle) { %>
-                    <p class="bio"> <strong>gitHubHandle:</strong><br>
-                      <%= member.gitHubHandle %>
+              <% if (member.bio) { %>
+                <p class="bio">
+                  <%= member.bio.html %>
+                </p>
+                <% }else{ %>
+                  <p>Geen Bio</p>
+                  <% } %>
+                    <h2>Contact</h2>
+                    <% if (member.gitHubHandle) { %>
+                      <p class="bio"> <strong>gitHubHandle:</strong><br>
+                        <%= member.gitHubHandle %>
 
-                    </p>
-                    <% }else{ %>
-                      <p class="bio">Geen githubhandle</p>
-                      <% } %>
-                        <% if (member.website) { %>
-                          <p class="bio"> <strong>Webiste:</strong><br>
-                            <a href="<%=  member.website %>">Bekijk visitekaartje</a>
+                      </p>
+                      <% }else{ %>
+                        <p class="bio">Geen githubhandle</p>
+                        <% } %>
+                          <% if (member.website) { %>
+                            <p class="bio"> <strong>Webiste:</strong><br>
+                              <a href="<%=  member.website %>">Bekijk visitekaartje</a>
 
-                          </p>
-                          <% }else{ %>
-                            <p class="bio">Geen website</p>
-                            <% } %>
+                            </p>
+                            <% }else{ %>
+                              <p class="bio">Geen website</p>
+                              <% } %>
 
-          </div>
-          <% }) %>
-      </article>
+            </div>
+            <% }) %>
+        </article>
+      </div>
     </section>
 
   </main>

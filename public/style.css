@@ -6,8 +6,8 @@
   --light: #fff;
   --dark: #000;
 
-  --primary: #110D40;
-  --secondary: #19CAB8;
+  --primary: #110d40;
+  --secondary: #19cab8;
   --tertiary: #334995;
 }
 
@@ -29,7 +29,8 @@ body {
 }
 
 h1 {
-  font-size: clamp(1.6em, 7vw, 1.8em);
+  /* font-size: clamp(1.6em, 7vw, 1.8em); */
+  font-size: 1.8em;
 }
 
 h1 span {
@@ -42,6 +43,8 @@ p {
 
 /* begin header + sidebar */
 
+/* book */
+
 header {
   display: flex;
   flex-direction: column;
@@ -50,8 +53,6 @@ header {
   background-color: var(--primary);
   color: var(--light);
 }
-
-
 
 .site-title {
   display: flex;
@@ -65,10 +66,10 @@ header {
   display: flex;
   align-items: center;
   gap: 0.5em;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow-x: auto;
   padding-top: 1em;
   white-space: nowrap;
+  margin-right: -2em;
 }
 
 .squad-filter ul {
@@ -102,6 +103,7 @@ header {
   gap: 0.5em;
   overflow-x: auto;
   white-space: nowrap;
+  margin-right: -2em;
 }
 
 .filter label {
@@ -110,6 +112,7 @@ header {
   background-color: var(--light);
   color: var(--dark);
   border-radius: var(--full-border);
+  transition: 0.3s ease-in-out;
 }
 
 .filter label:hover,
@@ -117,15 +120,26 @@ header {
   background-color: var(--secondary);
 }
 
-.side-bar {
+main {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
   width: 100%;
-  height: calc(100vh - 157.6px);
-  height: calc(100svh - 157.6px);
-  overflow-x: auto;
+}
+
+.side-bar {
   background-color: var(--tertiary);
+}
+
+.side-bar-title {
+  padding: 1em 2em 0.5em 2em;
+  color: var(--light);
+}
+
+.profiel {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow-x: auto;
 }
 
 .side-bar button {
@@ -133,18 +147,24 @@ header {
   align-items: center;
   gap: 2em;
   padding: 1em;
-  margin: 1em 1em 0 1em;
+  margin: 1em 0em 1em 2em;
   border: none;
-  background-color: var(--secondary);
+  background-color: var(--light);
   border-radius: var(--border);
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+  min-width: 300px;
 }
 
 .side-bar button:nth-last-child(1) {
   margin: 1em;
 }
 
-.side-bar button img{
+.side-bar button:hover {
+  background-color: var(--secondary);
+}
+
+.side-bar button img {
   height: 4em;
   aspect-ratio: 1/1;
   background-size: cover;
@@ -152,34 +172,61 @@ header {
   border-radius: var(--border);
 }
 
-main {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
 /* end header + sidebar */
 
+/* boek */
 
-.boek{
-  background-color: burlywood;
-  /* padding: 10px; */
-  margin-bottom: 50px;
-  border-style: solid;
-  border-width: 5px;
-  border-color: black;
-  width: 300px;
-  height: 500px;
-  box-shadow: 1px 5px 10px 2px black;
-}
-
-.boek-image{
-  height: 200px;
+.boek-member {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 158.67px - 238.67px);
+  height: calc(100svh - 158.67px - 238.67px);
   width: 100%;
-  object-fit: cover;
+  padding: 2em;
+  min-height: calc(400px + 2em + 2em);
+
 }
 
-.content-links{
+.page-flip {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-color: burlywood;
+  border: 5px solid black;
+  box-shadow: 1px 5px 10px 2px black;
+  border-radius: var(--border);
+  min-height: 400px;
+
+}
+
+.page-flip article {
+  background-color: burlywood;
+  height: 100%;
+  border-radius: var(--border);
+  width: 100%;
+  overflow-x: auto;
+}
+
+.rightcard {
+  display: none;
+}
+
+.leftcard,
+.cardtext {
+  animation: hide 1.5s linear 1;
+  height: 100%;
+  padding: 2em;
+}
+
+.boek-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--border);
+}
+
+.content-links {
   padding: 10px;
 }
 
@@ -197,50 +244,19 @@ main {
     opacity: 0;
   }
   100% {
-     opacity: 1;
+    opacity: 1;
   }
-}
-
-.boek-member {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-
-.boek {
-  background-color: burlywood;
-  padding: 50px;
-  border: 5px solid black;
-  width: 200px;
-  height: 350px;
-}
-
-.all-members {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-}
-.sorteer {
-  margin: 20px;
-  display: block;
-}
-
-ul {
-  list-style-type: none;
 }
 
 .sorteer-lijst {
   display: flex;
 }
 
-
-.bio{
+.bio {
   padding: 10px;
 }
 
-
-.member{
+.member {
   border-color: black;
   border-bottom: 5px;
   border-radius: 20px;
@@ -249,7 +265,7 @@ ul {
   margin: 10px;
 }
 
-.members-image{
+.members-image {
   display: block;
   margin: 0 auto;
   max-width: 80px;
@@ -257,7 +273,38 @@ ul {
   border-color: black;
 }
 
+@media screen and (min-width: 498px) {
+  .boek-member {
+    height: calc(100vh - 158.67px - 206px);
+    height: calc(100svh - 158.67px - 206px);
+    padding: 5em;
+    min-height: calc(400px + 5em + 5em)
+  }
+}
+
+h2 {
+  font-size: 32px;
+  margin: 20px;
+  text-align: center;
+}
+
+.animatie {
+  animation: nextPage 1s linear 1;
+}
+
+@media screen and (min-width: 800px) {
+  .rightcard {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 1030px) {
+  .boek-member {
+    height: calc(100vh - 158.67px - 158px);
+    height: calc(100svh - 158.67px - 158px);
+
+  }
+
   .site-title {
     flex-direction: row;
     align-items: center;
@@ -268,51 +315,65 @@ ul {
     padding-top: 0;
     padding-bottom: 0;
   }
-}
 
-h2{
-  font-size: 32px;
-  margin: 20px;
-  text-align: center;
-  
-}
-
-.animatie{
-  animation: nextPage 1s linear 1;
-
+  .squad-filter,
+  .filter {
+    margin-right: 0;
   }
-  
-  @keyframes nextPage {
-
-    100%{
-      opacity: 0;
-      transform: translateX(-300px);
-     
-    }
 }
 
-.leftcard{
-  animation: hide 1.5s linear 1;
+@media screen and (min-width: 1415px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .side-bar {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    min-width: 350px;
+    width: 100%;
+    height: calc(100vh - 157.6px);
+    height: calc(100svh - 157.6px);
+    overflow-x: auto;
+    background-color: var(--tertiary);
+  }
+
+  .profiel {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .side-bar button {
+    margin: 1em 2em 0 2em;
+  }
+
+  .side-bar button:nth-last-child(1) {
+    margin: 1em 2em;
+  }
+
+  .boek-member {
+    height: 100%;
+    padding: 10em;
+    min-height: calc(400px + 10em + 10em);
+  }
+}
+
+@keyframes nextPage {
+  100% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
 }
 
 @keyframes hide {
-  0%{
+  0% {
     opacity: 0;
   }
-  
-  100%{
+
+  100% {
     opacity: 1;
   }
-  
-}
-
-.page-flip{
-  background-color: burlywood;
-  height: 500px;
-  display: flex;
-  margin-bottom: 50px;
-  border-style: solid;
-  border-width: 5px;
-  border-color: black;
-  box-shadow: 1px 5px 10px 2px black;
 }
