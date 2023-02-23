@@ -192,7 +192,7 @@ main {
   height: 100%;
   width: 100%;
   display: flex;
-  background-color: burlywood;
+  background-color: var(--tertiary);
   border: 5px solid black;
   box-shadow: 1px 5px 10px 2px black;
   border-radius: var(--border);
@@ -201,7 +201,7 @@ main {
 }
 
 .page-flip article {
-  background-color: burlywood;
+  background-color: var(--tertiary);
   height: 100%;
   border-radius: var(--border);
   width: 100%;
@@ -261,7 +261,7 @@ main {
   border-bottom: 5px;
   border-radius: 20px;
   padding: 5px;
-  background-color: burlywood;
+  background-color: var(--tertiary);
   margin: 10px;
 }
 
