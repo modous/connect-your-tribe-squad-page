@@ -113,6 +113,7 @@ header {
   color: var(--dark);
   border-radius: var(--full-border);
   transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .filter label:hover,
