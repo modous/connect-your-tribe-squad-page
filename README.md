@@ -1,23 +1,20 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 # Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+<h2>Squad page 2022/2023 </h2>
 
 <h3>📚Inhoudsopgave</h3>
 <ul>
-<li><a href="#Opdracht"> 👨🏼‍💼 Opdracht</a></li> 
-<li><a href="#Gebruik"> 👩🏽‍💻 Gebruik </a></li>  
- <li><a href="#Installatie"> 🛠Installatie </a></li>
-<li><a href="#Kenmerken"> 📱 Kenmerken en uitleg Node, Express en EJS</a></li> 
+<li><a href="#Opdracht"> Opdracht</a></li> 
+<li><a href="#Gebruik"> Gebruik </a></li>  
+ <li><a href="#Installatie"> Installatie </a></li>
+<li><a href="#Kenmerken"> Kenmerken</a></li> 
 </ul>
 
-<h3 id="#Opdracht"> 👨🏼‍💼 Opdracht</h3>
+<h3 id="#Opdracht"> Opdracht</h3>
 Maak een squadpage website met alle visitekaartjes van FDND met gebruik van node.js. 
-
-
-
         
-<h3 id="#Gebruik"> 👩🏽‍💻 Gebruik van website</h3>
+<h3 id="#Gebruik"> Gebruik van website</h3>
 
 <h3 id="Installatie"> 🛠Installatie</h3>
 <li>Clone deze repository.</li>
@@ -36,15 +33,16 @@ Dit project is gemaakt met Node, Express, EJS.
 
 <h4>Tools</h4>
 <ul>
-        <li> 🖥️ Visual Studio Code</li>
+        <li> Visual Studio Code</li>
+        <li> Node </li>
 </ul>
 
 <h4>Gebruikte technieken</h4>
 <ul>
-<li>📟 HTML</li>
-        <li>🎨 CSS</li>
-        <li>🕹️ JavaScript</li>
-        <li>🥜 Node </li>
+<li> HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Node </li>
   </ul>      
 
 
