@@ -25,6 +25,7 @@ Maak een squadpage website met alle visitekaartjes van FDND met gebruik van node
 <li> Open de terminal en typ 'npm install'</li>
 <li>Door gebruik te maken van 'npm start', krijg je een lokale link waar je de code live kunt bekijken</li>
 <li>Om je project online te zetten, kun je gebruik maken van 'Cyclic'</li>
+<li>De website is te zien op:https://joyous-deer-shoulder-pads.cyclic.app/ </li>
         
 <h3 id="#Kenmerken"> Kenmerken</h3>
 Dit project is gemaakt met Node, Express, EJS. 
