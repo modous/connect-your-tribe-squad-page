@@ -133,7 +133,6 @@ main {
 
 .side-bar {
   background-color: var(--tertiary);
-  min-height: 560px;
 
 }
 
@@ -344,6 +343,8 @@ overflow-x: auto;
     height: calc(100svh - 157.6px);
     overflow-x: auto;
     background-color: var(--tertiary);
+    min-height: 560px;
+
   }
 
   .profiel {
