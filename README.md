@@ -3,7 +3,7 @@
 # Titel
 <h2>Squad page 2022/2023 </h2>
 
-<h3>📚Inhoudsopgave</h3>
+<h3>Inhoudsopgave</h3>
 <ul>
 <li><a href="#Opdracht"> Opdracht</a></li> 
 <li><a href="#Gebruik"> Gebruik </a></li>  
@@ -16,14 +16,14 @@ Maak een squadpage website met alle visitekaartjes van FDND met gebruik van node
         
 <h3 id="#Gebruik"> Gebruik van website</h3>
 
-<h3 id="Installatie"> 🛠Installatie</h3>
+<h3 id="Installatie"> Installatie</h3>
 <li>Clone deze repository.</li>
 <li>Open de repository in je code-editor</li>
 <li> Open de terminal en typ 'npm install'</li>
 <li>Door gebruik te maken van 'npm start', krijg je een lokale link waar je de code live kunt bekijken</li>
 <li>Om je project online te zetten, kun je gebruik maken van 'Cyclic'</li>
         
-<h3 id="#Kenmerken"> 📱 Kenmerken</h3>
+<h3 id="#Kenmerken"> Kenmerken</h3>
 Dit project is gemaakt met Node, Express, EJS. 
 <li>Wat is Node: Node.js is een software platform waarmee ontwikkelaars JavaScript kunnen gebruiken om applicaties te bouwen die op de computer kunnen draaien, net zoals in een webbrowser. Het biedt veel handige functies en is populair vanwege de snelle en efficiënte manier waarop het met data kan omgaan.</li>
 <br>
