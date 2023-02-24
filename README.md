@@ -3,6 +3,9 @@
 # Titel
 <h2>Squad page 2022/2023 </h2>
 
+<img width="1414" alt="image" src="https://user-images.githubusercontent.com/34092733/221176186-bcd79e98-247a-4658-81d3-46b59945251d.png">
+
+
 <h3>Inhoudsopgave</h3>
 <ul>
 <li><a href="#Opdracht"> Opdracht</a></li> 
