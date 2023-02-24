@@ -37,6 +37,10 @@ h1 span {
   color: var(--secondary);
 }
 
+h2 {
+  font-size: 1.5em;
+}
+
 p {
   font-size: 1.5em;
 }
@@ -129,6 +133,8 @@ main {
 
 .side-bar {
   background-color: var(--tertiary);
+  min-height: 560px;
+
 }
 
 .side-bar-title {
@@ -161,7 +167,8 @@ main {
   margin: 1em;
 }
 
-.side-bar button:hover {
+.side-bar button:hover,
+.side-bar button:has(button:checked) {
   background-color: var(--secondary);
 }
 
@@ -181,11 +188,12 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 158.67px - 238.67px);
-  height: calc(100svh - 158.67px - 238.67px);
+  height: calc(100vh);
+  height: calc(100svh);
   width: 100%;
   padding: 2em;
   min-height: calc(400px + 2em + 2em);
+  min-height: 560px;
 
 }
 
@@ -193,20 +201,20 @@ main {
   height: 100%;
   width: 100%;
   display: flex;
-  background-color: var(--tertiary);
+  gap: .3em;
+  background-color: var(--dark);
   border: 5px solid black;
   box-shadow: 1px 5px 10px 2px black;
   border-radius: var(--border);
   min-height: 400px;
+  overflow: hidden;
 
 }
 
 .page-flip article {
   background-color: var(--tertiary);
   height: 100%;
-  border-radius: var(--border);
   width: 100%;
-  overflow-x: auto;
 }
 
 .rightcard {
@@ -220,15 +228,20 @@ main {
   padding: 2em;
 }
 
+.cardtext {
+overflow-x: auto;
+}
+
 .boek-image {
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: var(--border);
+  max-width: 20em;
 }
 
 .content-links {
-  padding: 10px;
+  padding: 1em 0;
 }
 
 .show {
@@ -276,17 +289,9 @@ main {
 
 @media screen and (min-width: 498px) {
   .boek-member {
-    height: calc(100vh - 158.67px - 206px);
-    height: calc(100svh - 158.67px - 206px);
     padding: 5em;
     min-height: calc(400px + 5em + 5em)
   }
-}
-
-h2 {
-  font-size: 32px;
-  margin: 20px;
-  text-align: center;
 }
 
 .animatie {
@@ -297,14 +302,13 @@ h2 {
   .rightcard {
     display: block;
   }
+
+  .page-flip article {
+    width: 50%;
+  }
 }
 
 @media screen and (min-width: 1030px) {
-  .boek-member {
-    height: calc(100vh - 158.67px - 158px);
-    height: calc(100svh - 158.67px - 158px);
-
-  }
 
   .site-title {
     flex-direction: row;
@@ -357,9 +361,9 @@ h2 {
 
   .boek-member {
     height: 100%;
-    padding: 10em;
-    min-height: calc(400px + 10em + 10em);
-  }
+    padding: 3em 10em;
+    height: calc(100vh - 157.6px);
+    height: calc(100svh - 157.6px);  }
 }
 
 @keyframes nextPage {

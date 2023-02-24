@@ -35,7 +35,7 @@
       </section>
       <section class="profiel">
         <% squad.members.forEach(member=> { %>
-          <button>
+          <button class="trigger-member" data-id="<%= member.id %>">
 
             <% if (member.avatar) { %>
               <img src="<%= member.avatar %>"
