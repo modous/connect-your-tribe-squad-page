@@ -1,5 +1,5 @@
 
-
+// Het boek 
 const allTriggers = document.querySelectorAll(".trigger-member")
 const allLeftCards = document.querySelectorAll(".leftcard")
 const allCardText = document.querySelectorAll(".cardtext")
@@ -13,20 +13,21 @@ allTriggers.forEach((trigger) => {
     const activeCard1 = document.getElementById(id + 1)
 
     allLeftCards.forEach((leftCard) => {
-        
         leftCard.classList.add('hide')
     })
+
     allCardText.forEach((text) => {
         text.classList.add('hide')
     })
+
     allRightCards.forEach((rightCard) => {
         rightCard.classList.add('animatie')
-
+        //zorgt ervoor dat de rechter bladzijde tekst langzaam verdwijnt
         setTimeout (() => {
             rightCard.classList.remove('animatie')
-
         }, "1000")
     })
+
     activeCard.classList.remove("hide");
         activeCard1.classList.remove("hide");
   });
@@ -34,16 +35,3 @@ allTriggers.forEach((trigger) => {
 
 
 
-//Next pagina animatie
-
-// let next = document.querySelector(".animatie")
-// next.addEventListener("click", nextPage)
-
-// function nextPage(){
-//     next.classList.remove("nextpage")
-//     setTimeout (() =>{
-//         next.classList.add("nextpage")
-//     }, "100")
-
-
-// }

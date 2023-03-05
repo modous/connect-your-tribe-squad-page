@@ -66,6 +66,7 @@
           <% squad.members.forEach(member=> { %>
             <div class="leftcard hide" id="<%= member.id %>">
 
+              <!-- als de image nniet bestaat gebruiken we een placeholder -->
               <% if (member.avatar) { %>
                 <img class="boek-image" src="<%= member.avatar %>"
                   alt="De avatar van <%= member.name + ' ' + member.prefix + ' ' + member.surname %>" />
@@ -86,7 +87,7 @@
 
         </article>
         <article class="rightcard">
-          
+
           <!-- laat alle info in van een bepaalde persoon op de Rechter pagina in het boek zien -->
           <% squad.members.forEach(member=> { %>
             <div class="cardtext hide" id="<%= member.id + 1 %>">
@@ -116,7 +117,6 @@
                             <% }else{ %>
                               <p class="bio">Geen website</p>
                               <% } %>
-
             </div>
             <% }) %>
         </article>
