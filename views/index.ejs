@@ -34,9 +34,12 @@
         <p>bekijk mijn profiel</p>
       </section>
       <section class="profiel">
+        
+        <!-- Hier doe ik de for each loop waarmee je dus alle members van de squad ziet -->
         <% squad.members.forEach(member=> { %>
           <button>
 
+            <!-- laat de plaatje van de member in en als hij geen plaatje heeft krijgt hij een devault plaatje -->
             <% if (member.avatar) { %>
               <img src="<%= member.avatar %>"
                 alt="De avatar van <%= member.name + ' ' + member.prefix + ' ' + member.surname %>" />
@@ -53,9 +56,13 @@
       </section>
     </section>
 
+
+    <!-- Laat het boek zien -->
     <section class="boek-member">
       <div class="page-flip">
         <article class="cardprofile">
+
+          <!-- laat alle info in van een bepaalde persoon op de linker pagina in het boek zien -->
           <% squad.members.forEach(member=> { %>
             <div class="leftcard hide" id="<%= member.id %>">
 
@@ -79,6 +86,8 @@
 
         </article>
         <article class="rightcard">
+          
+          <!-- laat alle info in van een bepaalde persoon op de Rechter pagina in het boek zien -->
           <% squad.members.forEach(member=> { %>
             <div class="cardtext hide" id="<%= member.id + 1 %>">
               <h2>Bio </h2>

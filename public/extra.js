@@ -27,15 +27,9 @@ allTriggers.forEach((trigger) => {
 
         }, "1000")
     })
-
     activeCard.classList.remove("hide");
-  
         activeCard1.classList.remove("hide");
-  
-
   });
-  // var long = element.dataset.long;
-  // console.log(long)
 });
 
 
