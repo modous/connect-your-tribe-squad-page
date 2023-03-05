@@ -37,7 +37,7 @@
         
         <!-- Hier doe ik de for each loop waarmee je dus alle members van de squad ziet -->
         <% squad.members.forEach(member=> { %>
-          <button>
+          <button class="trigger-member" data-id="<%= member.id %>">
 
             <!-- laat de plaatje van de member in en als hij geen plaatje heeft krijgt hij een devault plaatje -->
             <% if (member.avatar) { %>
