@@ -101,11 +101,13 @@
                   <p>Geen Bio</p>
                   <% } %>
                     <h2>Contact</h2>
+                    <!-- als er een githubhandle is dan laat hij de githubhandle zien :D -->
                     <% if (member.gitHubHandle) { %>
                       <p class="bio"> <strong>gitHubHandle:</strong><br>
                         <%= member.gitHubHandle %>
 
                       </p>
+                      <!-- en anders krijg je "geen githubhandle" te zien -->
                       <% }else{ %>
                         <p class="bio">Geen githubhandle</p>
                         <% } %>
